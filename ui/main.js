@@ -1,4 +1,9 @@
 const saveBtn = document.getElementById('save');
+const openPage = document.getElementById('config');
+
+openPage.addEventListener('click', () => {
+    browser.tabs.create({ url: "./main.html" }).then(window.close());
+})
 
 saveBtn.addEventListener('click', () => {
     let url = document.getElementById('url').value.trim();
@@ -8,7 +13,7 @@ saveBtn.addEventListener('click', () => {
         // add validation if urls are correct formatted
         saveEntry(url, redurl);
     } else {
-        alert('please fill in both url fields');
+        alert('empty field');
     }
 });
 

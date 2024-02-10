@@ -2,16 +2,35 @@
   "manifest_version": 2,
   "name": "redurl",
   "version": "1.0",
-
   "description": "url redirector",
+
+  "author": "ahsmha",
+  "homepage_url": "https://github.com/ahsmha/redurl",
+
+  "permissions": [
+    "webRequest",
+    "storage"
+  ],
+
+  "options_ui": {
+    "page": "./ui/main.html",
+    "open_in_tab": true
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    },
+    "default_popup": "ui/popup.html",
+    "default_title": "redurl"
+  },
 
   "icons": {
     "48": "icons/icon-48.png"
-  },
+  }
 
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"]
-    }
-  ]
 }
