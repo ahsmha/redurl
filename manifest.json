@@ -1,18 +1,17 @@
 {
   "manifest_version": 2,
-  "name": "redirect",
+  "name": "redurl",
   "version": "1.0",
 
-  "description": "custom url redirector.",
+  "description": "url redirector",
 
   "icons": {
-    "48": "icons/icon.png"
+    "48": "icons/icon-48.png"
   },
 
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["redirect.js"]
+      "matches": ["<all_urls>"]
     }
   ]
 }
