@@ -1,16 +1,17 @@
 const saveBtn = document.getElementById('save');
-const openPage = document.getElementById('config');
+// will work only for popup
+// const openPage = document.getElementById('config');
 
-openPage.addEventListener('click', () => {
-    browser.tabs.create({ url: "./main.html" }).then(window.close());
-})
+// openPage.addEventListener('click', () => {
+//     browser.tabs.create({ url: "./main.html" }).then(window.close());
+// })
 
 saveBtn.addEventListener('click', () => {
     let url = document.getElementById('url').value.trim();
     let redurl = document.getElementById('redirecturl').value.trim();
-
+    // todo: add regex validation
     if (url && redurl) {
-        // add validation if urls are correct formatted
+        // todo: add validation if urls are correct formatted
         saveEntry(url, redurl);
     } else {
         alert('empty field');
@@ -37,9 +38,9 @@ function displayRules(redirects) {
         row.innerHTML = `
             <td>${url}</td>
             <td>${redurl}</td>
-            <td><button onclick="removeRow(this, '${url}')">remove</button></td>
         `;
-        tbody.appendChild(row);
+        //tbody.appendChild(row);
+            // <td><button onclick="removeRow(this, '${url}')">remove</button></td>
     }
 }
 

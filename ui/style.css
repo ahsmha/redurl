@@ -36,7 +36,7 @@ strong {
 .logo img {
     max-height: 2.5rem;
     max-width: 2.5rem;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 .logo {
@@ -88,12 +88,16 @@ nav ul {
 }
 
 nav ul li {
-    padding-right: 10px;
+    padding-right: 8px;
     display: inline-block;
 }
 
 .footimg > a {
     padding-right: 10px;
+}
+
+button {
+    margin-bottom: 4px;
 }
 
 table {
